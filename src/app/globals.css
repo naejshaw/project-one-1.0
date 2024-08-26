@@ -2,10 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: "Arimo", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary: #183029;
+  --secondary: #b99567;
+  --tertiary: #ffffff;;
+  --btn-bg: #b99567;
+  --btn-text: #ffffff;;
+  --line-header: #88a6c72f;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: var(--tertiary);;
+}
+
+section{
+  min-height: 100vh;
+}
+
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,13 +66,8 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100vh;
+  background: var(--primary);
 }
 
 @layer utilities {
